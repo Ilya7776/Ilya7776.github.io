@@ -1,0 +1,80 @@
+<HTML>
+    <head>
+            <meta charset="utf-8">
+            <link rel="icon" href="../images/icon.ico" type="image/x-icon">
+            <title>The Attack Of The Dead Men</title>
+            <link rel="stylesheet" href="../style/styles.css">
+            <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+            <script>
+            $(function() {
+                    var btn = $(".btn"), block = $(".box");
+    
+                    $(document).click(function(event) {
+                            var target = $(event.target),cur;
+                            if (target.is(".btn")) {
+                                   event.preventDefault();
+                                   var index = btn.index(target);
+                                   cur = block.eq(index).slideToggle();
+                                   target.toggleClass("open")
+                             }
+                            if (target.closest(".box").length) return;
+                            block.not(cur).slideUp("slow");
+                            btn.not(target).removeClass("open")
+                    })
+            });
+            </script>
+    </head>
+    <body>
+            <header class="site_header">
+                    <h1><a class="title" href="../index.htm">The Attack Of The Dead Men</a></h1>
+    
+                    <ul class="mmenuu">
+                    <li><a href="page_images.htm">Фотоматериалы</a>
+                            <ul class="ssubmenuu">
+                            <li><a>Здесь могла быть ссылка</a></li>
+                            </ul>
+                    </li>
+                    <li><a href="page_audio.htm">Аудио</a>
+                            <ul class="ssubmenuu">
+                            <li><a>И здесь</a></li>
+                            </ul>
+                    </li>
+                    <li><a href="page_video.htm">Видео</a>
+                            <ul class="ssubmenuu">
+                            <li><a>И даже здесь</a></li>
+                            </ul>
+                    </li>
+                    </ul>
+            </header>
+            <aside  class="site_aside">
+                    <div id="first">
+                            Данный сайт создан для практической работы №6 HTML. 
+                            Очень надеюсь, что данная работа, как и остальные получат зачёт
+                    </div>
+                    <div id="second">
+                            <h3>Вам понравился сайт?</h3>
+                            <p> <button id="trigger"  class="btn">Да</button>/<button id="filtertrigger" class="btn" >Нет</button></p>
+                            <aside id="box"  class="box">Спасибо!!! (^&omega;^)</aside>
+                            <aside id="blockfilter" class="box">Будем доделывать...<img src="../images/Будем работать.gif">
+                    </div>
+            </aside>
+            <main>
+                <h1>Фотоматериалы</h1>
+                <div class="image">
+                <img src="../images/The_great_war.png" alt="Обложка альбома The great war" align="left" vspace="10"></p>
+                <p>Обложка альбома "The Great War"</p>
+                </div>
+                <div class="image">
+                <img src="../images/photo.jpg" alt="Медицинский персонал 3-го крепостного госпиталя" align="left" vspace="10"></p>
+                <p>Медицинский персонал 3-го крепостного госпиталя</p>
+                </div>
+                <div class="image">
+                <img src="../images/226_Zemliansky.png" alt="Раздача пищи из котлов на заречном форту чинам 226 пех.Землянского полка" align="left" vspace="10"></p>
+                <p>Раздача пищи из котлов на заречном форту чинам 226 пех.Землянского полка</p>
+                </div>
+        </main>
+            <footer class="site_footer">
+                    <p class="ssilka" align="center"><a class="ssilka" href="https://www.sabaton.net/historical-facts/attack-of-the-dead-men/">Официальный сайт "Sabaton"</a></p>
+            </footer>
+    </body>
+</HTML>

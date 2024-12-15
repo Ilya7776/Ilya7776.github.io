@@ -1,0 +1,73 @@
+<HTML>
+        <head>
+                <link rel="icon" href="../images/icon.ico" type="image/x-icon">
+                <meta charset="utf-8">
+                <title>The Attack Of The Dead Men</title>
+                <link rel="stylesheet" href="../style/styles.css">
+                <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+                <script>
+                $(function() {
+                        var btn = $(".btn"), block = $(".box");
+        
+                        $(document).click(function(event) {
+                                var target = $(event.target),cur;
+                                if (target.is(".btn")) {
+                                       event.preventDefault();
+                                       var index = btn.index(target);
+                                       cur = block.eq(index).slideToggle();
+                                       target.toggleClass("open")
+                                 }
+                                if (target.closest(".box").length) return;
+                                block.not(cur).slideUp("slow");
+                                btn.not(target).removeClass("open")
+                        })
+                });
+                </script>
+        </head>
+        <body>
+                <header class="site_header">
+                        <h1><a class="title" href="../index.htm">The Attack Of The Dead Men</a></h1>
+        
+                        <ul class="mmenuu">
+                        <li><a href="page_images.htm">Фотоматериалы</a>
+                                <ul class="ssubmenuu">
+                                <li><a>Здесь могла быть ссылка</a></li>
+                                </ul>
+                        </li>
+                        <li><a href="page_audio.htm">Аудио</a>
+                                <ul class="ssubmenuu">
+                                <li><a>И здесь</a></li>
+                                </ul>
+                        </li>
+                        <li><a href="page_video.htm">Видео</a>
+                                <ul class="ssubmenuu">
+                                <li><a>И даже здесь</a></li>
+                                </ul>
+                        </li>
+                        </ul>
+                </header>
+                <aside  class="site_aside">
+                        <div id="first">
+                                Данный сайт создан для практической работы №6 HTML. 
+                                Очень надеюсь, что данная работа, как и остальные получат зачёт
+                        </div>
+                        <div id="second">
+                                <h3>Вам понравился сайт?</h3>
+                                <p> <button id="trigger"  class="btn">Да</button>/<button id="filtertrigger" class="btn" >Нет</button></p>
+                                <aside id="box"  class="box">Спасибо!!! (^&omega;^)</aside>
+                                <aside id="blockfilter" class="box">Будем доделывать...<img src="../images/Будем работать.gif">
+                        </div>
+                </aside>
+                <main>
+                    <h1>Видеоматериалы</h1>
+                    <p>
+                    <video poster="../images/cadr.png" controls >
+                        <source src="../html_files/SABATON - The Attack of the Dead Men (Official Lyric Video).mp4">
+                    </video>
+                    </p>
+                </main>
+                <footer class="site_footer">
+                        <p class="ssilka" align="center"><a class="ssilka" href="https://www.sabaton.net/historical-facts/attack-of-the-dead-men/">Официальный сайт "Sabaton"</a></p>
+                </footer>
+        </body>
+</HTML>

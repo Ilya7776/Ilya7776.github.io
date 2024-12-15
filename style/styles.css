@@ -1,0 +1,231 @@
+body {
+    /* Убираю отступы. */
+    margin:0px;
+    /* Убираю еще отступы. */
+    padding:0px;
+    /* Задаю шрифт. */
+    font: 14px 'Verdana';
+}
+ul {
+    /* Убираю маркеры у списка*/
+    list-style: none;
+    /* Делаю элементы блочными. */
+    display: block;
+    /* Убираю отступы. */
+    margin:0px;
+    /* Убираю еще отступы! */
+    padding:0px;
+}
+ul:after {
+    /* Делаю элементы блочными. */
+    display: block;
+    /* Убираю выравнивание. */
+    float: none;
+    content: ' ';
+    clear: both;
+}
+ul.mmenuu > li {
+    /* Задаю выравнивание и позиционирование. */
+    float: left;
+    /* Считаем координаты относительно исходного места*/
+    position: relative;
+}
+ul.mmenuu > li > a {
+    /* Делаю элементы блочными: */
+    display: block;
+    /* Задаю белый цвет. */
+    color: #fff;
+    /* Задаю отступ 10px. */
+    padding: 10px;
+    /* Убираю форматирование*/
+    text-decoration: none;
+    /* Задаю цвет. */
+    background-color: #046614;
+}
+ul.mmenuu > li > a:hover {
+    /* Задаю цвет при наведении. */
+    background-color: white;
+    color: #054705;
+}
+ul.ssubmenuu {
+    position: absolute;
+    width: 240px;
+    top: 37px;
+    left:0px;
+    /* Делаю субменю скрытыми. */
+    display: none;
+    /* Цвет — белый. */
+    background-color: white;
+}
+ul.ssubmenuu > li {
+    /* Блочное расположение элементов*/
+    display: block;
+}
+ul.ssubmenuu > li > a {
+    /* Делаю элементы блочными. */
+    display: block;
+    /* Убираю форматирование*/
+    text-decoration: none;
+    /* Задаю отступ. */
+    padding: 10px;
+    /* Задаю цвет. */
+    color: white;
+    /* Еще цвет. */
+    background-color: #328f205e;
+}
+ul.ssubmenuu > li > a:hover {
+    /* Цвет бэкграунда при наведении. */
+    background-color: #50ac05;
+    /* Задаю подчеркивание*/
+    text-decoration: underline;
+    color: #054705;
+}
+ul.mmenuu > li:hover > ul.ssubmenuu {
+    /* Делаю элементы блочными. */
+    display: block;
+}
+
+header.site_header {
+ margin: 0px;
+ background: #407406;
+ margin-bottom: 0px;
+ position: fixed;
+ width: 93.5%;
+ padding-left: 6.5%;
+ padding-right: 6.5%;
+}
+
+a.title { 
+ color: white;
+ text-decoration: none; 
+}
+
+a.title:visited { 
+ color: white;
+}
+
+aside.site_aside {
+ margin-top: 100pt;
+ margin-left: 73.5%;
+ border-left: none;
+ padding: 1%;
+ position: fixed;
+ background: white;
+ border-radius: 20px;
+}
+
+.box{
+      display: none;
+  }
+  .btn.open:after{
+      content: "Закрыть";
+      display: block;
+      position: absolute;
+      top: 0;
+      left: 0;
+      color: #000000;
+      text-align: center;
+      width: 100%;
+  }
+  .btn{
+      position: relative;
+  }
+  .btn.open{
+      color: transparent;
+  }
+
+
+main {
+ margin-top: 100pt;
+ margin-bottom: 10%;
+ margin-right: 30%;
+ margin-left: 6.5%;
+ padding: 2%;
+ float: left;
+ background: white;
+ border-radius: 1%;
+}
+
+p#text {
+ text-indent: 20px;
+ font-family: Arial;
+ padding: 5px;
+ text-align: justify;
+ font-size: 18px;
+}
+
+body {
+ background: url(../images/фон.jfif);
+ background-attachment: fixed;
+}
+
+tr.grey {
+ background: #CCCCCC;
+}
+
+p.text {
+ font-size: 18px;
+ text-indent: 2%;
+ text-align: justify;
+ padding: 10px;
+}
+ul.text {
+ font-size: 17px;
+ list-style: disc;
+ margin-left: 4%
+}
+
+ol {
+ font-size: 17px;
+ margin-left: 4%
+}
+
+p.grey {
+ padding-left: 5%;
+ background: #CCCCCC;
+}
+
+p.pic {
+ text-align: center;
+}
+
+footer.site_footer {
+ float: bottom;
+ background: grey;
+ height: 35pt;
+ width: 100%;
+ align: center;
+ bottom:0;
+ position: fixed;
+}
+
+p.ssilka {
+ align: center;
+ color: white;
+}
+
+a.ssilka {
+ align: center;
+ color: white;
+}
+
+img {
+ width: 100%;
+}
+
+div#second {
+    margin-top: 5px;
+}
+
+div.image {
+    text-align: center;
+    color: grey;
+}
+
+p#cur {
+    font-style: italic;
+}
+
+video {
+    width: 100%;
+}
